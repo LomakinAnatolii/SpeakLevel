@@ -1,0 +1,62 @@
+// 100: Thin;
+// 200: Extra Light (Ultra Light);
+// 300: Light;
+// 400: Normal;
+// 500: Medium;
+// 600: Semi Bold (Demi Bold);
+// 700: Bold;
+// 800: Extra Bold (Ultra Bold);
+// 900: Black (Heavy).
+
+//mixin for fonts in css
+@mixin font($font_name, $file_name, $weight, $style,)
+  @font-face
+    font-family: $font_name
+    font-style: #{$style}
+    font-weight: #{$weight}
+    src: url("../fonts/#{$file_name}.woff2") format("woff2"), url("../fonts/#{$file_name}.woff") format("woff")
+    font-display: swap
+
+//mixin for retina in css
+@mixin retina($density: 2)
+  @media only screen and (-webkit-min-device-pixel-ratio: $density),only screen and (min--moz-device-pixel-ratio: $density),only screen and (-o-min-device-pixel-ratio: #{$density}/1),only screen and (min-device-pixel-ratio: $density),only screen and (min-resolution: 192dpi),only screen and (min-resolution: $density dppx)
+    @content
+
+//user variables
+$font_family_Ubuntu: "Ubuntu", Arial, sans-serif
+$font_size: 18px
+$line_height: 1.3
+$font_weight: 400
+
+// colors
+$accent_color: #f77c1d
+$dark_color: #21022c
+$white_color: #ffffff
+$light_orange: #fde5d2
+$line_color:  #e6e4e7
+
+// text variables
+$text_color: #21022c
+
+// icon variables
+$background_color: #fde5d2
+$icon__hover-color: #f77c1d
+
+// dots hover
+$dot_hover: #ed8434
+
+//breakpoints
+$media_1200: 1200px
+$media_992: 992px
+$media_768: 768px
+$media_576: 576px
+$media_480: 480px
+$media_320: 320px
+
+=to($max_width)
+  @media screen and (max-width: $max_width)
+    @content
+
+=from($min_width)
+  @media screen and (min-width: $min_width)
+    @content

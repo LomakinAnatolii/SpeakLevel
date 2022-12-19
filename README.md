@@ -1,1 +1,1 @@
-https://LomakinAnatoliy.github.io/rsschool-cv/
+https://LomakinAnatoliy.github.io/SpeakLevel/dist/

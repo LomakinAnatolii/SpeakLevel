@@ -1,1 +1,1 @@
-https://LomakinAnatoliy.github.io/SpeakLevel/dist/
+https://LomakinAnatoliy.github.io/SpeakLevel/
